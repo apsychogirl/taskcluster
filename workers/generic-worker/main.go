@@ -30,7 +30,7 @@ import (
 	tcclient "github.com/taskcluster/taskcluster/v25/clients/client-go"
 	"github.com/taskcluster/taskcluster/v25/clients/client-go/tcqueue"
 	"github.com/taskcluster/taskcluster/v25/internal/scopes"
-	"github.com/taskcluster/taskcluster/v25/tools/taskcluster-worker-runner/protocol"
+	"github.com/taskcluster/taskcluster/v25/tools/worker-runner/protocol"
 	"github.com/taskcluster/taskcluster/v25/workers/generic-worker/expose"
 	"github.com/taskcluster/taskcluster/v25/workers/generic-worker/fileutil"
 	"github.com/taskcluster/taskcluster/v25/workers/generic-worker/gwconfig"
@@ -63,10 +63,9 @@ var (
 	configProvider gwconfig.Provider
 	Features       []Feature
 
-	// Support for communication betweeen this process and
-	// taskcluster-worker-runner.  This is initialized early in the
-	// `generic-worker run` process and can be used by any component after that
-	// time.
+	// Support for communication betweeen this process and worker-runner.
+	// This is initialized early in the `generic-worker run` process and can be
+	// used by any component after that time.
 	workerRunnerTransport protocol.Transport
 	WorkerRunnerProtocol  *protocol.Protocol
 
