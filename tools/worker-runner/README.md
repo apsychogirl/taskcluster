@@ -362,10 +362,5 @@ See [deployment](./docs/deployment.md) for advice on deploying worker-runner its
 
 # Development
 
-This application requires go1.12.
+This application requires go1.13.
 Test with `go test ./...`.
-
-## Releases
-
-To make a new release, run `./release.sh <version>`.
-Examine the resulting commit and tag for completeness, then push to the upstream repository.
