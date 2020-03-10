@@ -273,7 +273,7 @@ class Handlers {
     await instGithub.repos.createCommitComment({
       owner: organization,
       repo: repository,
-      sha,
+      commit_sha: sha,
       body,
     });
   }
